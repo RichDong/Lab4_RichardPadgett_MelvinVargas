@@ -6,4 +6,5 @@ public class Jugadores {
     int dinero;
     int puntos;
     Guerreros g;
+    
 }
