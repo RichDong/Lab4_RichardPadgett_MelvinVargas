@@ -95,7 +95,7 @@ public class Arqueros extends Guerreros {
 
     @Override
     public String toString() {
-        return "Arqueros{" + "materialarc=" + materialarc + ", materialarm=" + materialarm + '}';
+        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "\nNivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: "+ "\nMaterial Arco: " + materialarc + "\nmaterial de arma"+ materialarm;
     }
     
     @Override

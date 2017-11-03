@@ -51,7 +51,7 @@ public class Jugadores {
 
     @Override
     public String toString() {
-        return "Jugadores{" + "nombre=" + nombre + ", dinero=" + dinero + ", puntos=" + puntos + ", g=" + g + '}';
+        return "Jugadores: " + "\n nombre: " + nombre + "\n dinero: " + dinero + "\n puntos: " + puntos + "\n Guerrero: " + g;
     }
     
 }

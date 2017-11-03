@@ -95,7 +95,7 @@ public class Brujas extends Guerreros {
 
     @Override
     public String toString() {
-        return "Brujas{" + "suglon=" + suglon + ", lugar=" + lugar + '}';
+        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "N\nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: "+"\nSiglo de navimiento: " + suglon + "\nlugar de residencia: " + lugar;
     }
     
     @Override
