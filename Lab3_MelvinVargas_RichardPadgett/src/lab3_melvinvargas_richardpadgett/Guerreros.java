@@ -81,7 +81,7 @@ public abstract class Guerreros {
 
     }
 
-    public abstract void ataque(ArrayList<Jugadores> jug, boolean turn);
+    public abstract boolean ataque(ArrayList<Jugadores> jug, boolean turn,boolean ganador);
 
     @Override
     public String toString() {

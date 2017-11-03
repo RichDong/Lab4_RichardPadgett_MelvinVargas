@@ -93,8 +93,8 @@ String rangom;
     
 
     @Override
-    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
-        
+    public boolean ataque(ArrayList<Jugadores> jug, boolean turn,boolean ganador) {
+        return ganador;
     }
     
 }

@@ -96,8 +96,27 @@ public class Magos extends Guerreros {
     }
 
     @Override
-    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
-
+    public boolean ataque(ArrayList<Jugadores> jug, boolean turn,boolean ganador) {
+        if(turn==false){
+            this. ataque=(jug.get(0).getG().getAtaque())+ (jug.get(1).getG().getAtaque()/2);
+            if(jug.get(1).getG().getSalud()-ataque>=0){
+                jug.get(1).getG().setSalud(jug.get(1).getG().getSalud()-ataque);
+                
+            }else{
+                System.out.println("jugador 2 su guerrero ha muerto :(");
+                ganador=true;
+            }
+   
+        }else{
+            this. ataque=(jug.get(1).getG().getAtaque())+ (jug.get(0).getG().getAtaque()/2);
+            if(jug.get(0).getG().getSalud()-ataque>=0){
+                jug.get(0).getG().setSalud(jug.get(0).getG().getSalud()-ataque);
+            }else{
+                System.out.println("jugador 1 su guerrero ha muerto :(");
+                ganador=true;
+            }
+        }
+        return ganador;
     }
 
 }

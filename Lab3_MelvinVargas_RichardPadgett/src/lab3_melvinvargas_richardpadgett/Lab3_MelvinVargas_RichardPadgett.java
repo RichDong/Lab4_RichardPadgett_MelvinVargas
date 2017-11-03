@@ -126,10 +126,17 @@ public class Lab3_MelvinVargas_RichardPadgett {
                 boolean turno=false;
                 do{
                   if(turno=false){
-                      g.ataque(jugando,turno);
-                      
+                      g.ataque(jugando,turno,ganador);
+                      System.out.println("Salud del guerrero del primer jugador");
+                      System.out.println(jugando.get(0).getG().getSalud());
+                      System.out.println("Salud del guerrero del segundo jugador");
+                      System.out.println(jugando.get(1).getG().getSalud());
                   }else{
-                      g.ataque(jugando,turno);
+                      g.ataque(jugando,turno,ganador);
+                      System.out.println("Salud del guerrero del primer jugador");
+                      System.out.println(jugando.get(0).getG().getSalud());
+                      System.out.println("Salud del guerrero del segundo jugador");
+                      System.out.println(jugando.get(1).getG().getSalud());
                   }
                 }while(ganador==false);
             }
