@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Lab3_MelvinVargas_RichardPadgett {
 
     static ArrayList<Guerreros> lista = new ArrayList();
-    static Scanner sc=new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         String opcion = "";
         while (!opcion.equals("g")) {
@@ -19,47 +20,69 @@ public class Lab3_MelvinVargas_RichardPadgett {
             System.out.println("g-salir del programa");
             if (opcion.equals("a")) {
                 System.out.println("Ingrese nombre del guerrero");
-                String nombreg=sc.next();
+                String nombreg = sc.next();
                 System.out.println("Ingrese edad del guerrero");
-                int edad=sc.nextInt();
+                int edad = sc.nextInt();
                 System.out.println("Ingrese nivel de ataque del guerrero ");
-                int ataque;
+                int ataque = sc.nextInt();
                 System.out.println("Ingrese la salud del guerrero");
-                int salud=sc.nextInt();
+                int salud = sc.nextInt();
                 System.out.println("Ingrese el costo del guerrero");
-                int costo;
+                int costo = sc.nextInt();
+                System.out.println("Ingrese lugar de nacimiento");
+                String lugarn = sc.next();
                 System.out.println("1. mago");
                 System.out.println("2. elfo");
                 System.out.println("3. dragon");
                 System.out.println("4. arquero");
                 System.out.println("5. bruja");
                 System.out.println("Ingrese numero de opcion de la tropa que quiere crear");
-                int op=sc.nextInt();
-                switch(op){
+                int op = sc.nextInt();
+                switch (op) {
                     case 1:
-                        lista.add(new Magos());
+                        System.out.println("Ingrese tipo de magia");
+                        String tipom = sc.next();
+                        System.out.println("Ingrese el tipo de elemento");
+                        String elemnt = sc.next();
+                        lista.add(new Magos(tipom, elemnt, nombreg, edad, ataque, salud, costo, lugarn));
                         break;
                     case 2:
-                        lista.add(new Elfos());
+                        System.out.println("Ingrese el tipo de arma");
+                        String tipoar = sc.next();
+                        System.out.println("Ingrese el rango militar");
+                        String rangom = sc.next();
+                        lista.add(new Elfos(tipoar, rangom, nombreg, edad, ataque, salud, costo, lugarn));
                         break;
                     case 3:
-                        lista.add(new Dragoneros());
+                        System.out.println("Ingrese el color del dragon");
+                        String color = sc.next();
+                        System.out.println("Ingrese raza del dragon");
+                        String raza = sc.next();
+                        lista.add(new Dragoneros(color, raza, nombreg, edad, ataque, salud, costo, lugarn));
                         break;
                     case 4:
-                        lista.add(new Elfos());
+                        System.out.println("Ingrese material del arco");
+                        String materialarc=sc.next();
+                        System.out.println("Ingrese material de la armadura");
+                        String materialarm=sc.next();
+                        lista.add(new Elfos(materialarc,materialarm,nombreg,edad,ataque,salud,costo,lugarn));
                         break;
                     case 5:
-                        lista.add(new Brujas());
+                        System.out.println("Ingrese siglo de nacimiento");
+                        int suglon=sc.nextInt();
+                        System.out.println("Ingrese lugar de residencia");
+                        String lugar=sc.next();
+                        lista.add(new Brujas(suglon,lugar,nombreg,edad,ataque,salud,costo,lugarn));
                         break;
                 }
             }
             if (opcion.equals("b")) {
                 System.out.println("Ingrese la posicion del guerrero que desea eliminar");
-                int pos=sc.nextInt();
+                int pos = sc.nextInt();
                 lista.remove(pos);
             }
             if (opcion.equals("c")) {
-
+                
             }
             if (opcion.equals("d")) {
 
