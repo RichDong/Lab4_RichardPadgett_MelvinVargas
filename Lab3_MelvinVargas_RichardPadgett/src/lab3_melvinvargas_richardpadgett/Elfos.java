@@ -9,6 +9,6 @@ package lab3_melvinvargas_richardpadgett;
  *
  * @author richa
  */
-public class Elfos {
+public class Elfos extends Guerreros  {
     
 }

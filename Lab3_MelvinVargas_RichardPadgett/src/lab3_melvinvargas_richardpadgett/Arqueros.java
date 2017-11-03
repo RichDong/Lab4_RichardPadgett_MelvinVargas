@@ -9,6 +9,6 @@ package lab3_melvinvargas_richardpadgett;
  *
  * @author richa
  */
-public class Arqueros {
+public class Arqueros extends Guerreros {
     
 }
