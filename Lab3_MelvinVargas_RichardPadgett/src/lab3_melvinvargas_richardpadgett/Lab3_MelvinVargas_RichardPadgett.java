@@ -5,7 +5,7 @@ public class Lab3_MelvinVargas_RichardPadgett {
 
 
     public static void main(String[] args) {
-    
+        
     }
     
 }
