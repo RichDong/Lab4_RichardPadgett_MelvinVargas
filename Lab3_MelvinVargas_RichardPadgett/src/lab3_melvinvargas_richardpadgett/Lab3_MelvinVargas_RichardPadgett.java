@@ -113,6 +113,7 @@ public class Lab3_MelvinVargas_RichardPadgett {
                 }
                 g = lista.get(pos);
                 lista2.add(new Jugadores(nombre, dinero, puntos, g));
+                lista.remove(pos);
             }
             if (opcion.equals("d")) {
                 int cont = 1;
@@ -123,27 +124,33 @@ public class Lab3_MelvinVargas_RichardPadgett {
                     cont++;
                 }
                 boolean ganador = false;
-                boolean turno = false;
+                boolean turno = true;
+                int cont2=1;
                 do {
-                    if (turno = false) {
-                        g.ataque(jugando, turno, ganador);
+                    if (cont2==1) {
+                        turno=g.ataque(jugando, true, ganador);
                         System.out.println("Salud del guerrero del primer jugador");
                         System.out.println(jugando.get(0).getG().getSalud());
                         System.out.println("Salud del guerrero del segundo jugador");
                         System.out.println(jugando.get(1).getG().getSalud());
                         System.out.println("");
-                        turno = true;
+                        cont2++;
+                        
 
                     } else {
-                        g.ataque(jugando, turno, ganador);
+                       turno= g.ataque(jugando, false, ganador);
                         System.out.println("Salud del guerrero del primer jugador");
                         System.out.println(jugando.get(0).getG().getSalud());
                         System.out.println("Salud del guerrero del segundo jugador");
                         System.out.println(jugando.get(1).getG().getSalud());
                         System.out.println("");
-                        turno = false;
+                        cont2--;
+                       
                     }
-                } while (ganador == false);
+                    if(turno==false){
+                        ganador=true;
+                    }
+                } while (ganador==false);
             }
             if (opcion.equals("e")) {
                 System.out.print(lista2);

@@ -55,22 +55,22 @@ public class Magos extends Guerreros {
             this. ataque=(jug.get(0).getG().getAtaque())+ (jug.get(1).getG().getAtaque()/2);
             if(jug.get(1).getG().getSalud()-ataque>=0){
                 jug.get(1).getG().setSalud(jug.get(1).getG().getSalud()-ataque);
-              
+               return true;
             }else{
-                System.out.println("jugador 2 su guerrero ha muerto :(");
-                ganador=true;
+                System.out.println("jugador 2 su guerrero ha muerto");
+                return false;
             }
    
         }else{
             this. ataque=(jug.get(1).getG().getAtaque())+ (jug.get(0).getG().getAtaque()/2);
             if(jug.get(0).getG().getSalud()-ataque>=0){
                 jug.get(0).getG().setSalud(jug.get(0).getG().getSalud()-ataque);
+                return true;
             }else{
                 System.out.println("jugador 1 su guerrero ha muerto :(");
-                ganador=true;
+                return false;
             }
         }
-        return ganador;
     }
 
 }
