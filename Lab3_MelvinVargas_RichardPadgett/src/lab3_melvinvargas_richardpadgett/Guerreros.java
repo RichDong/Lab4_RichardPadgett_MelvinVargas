@@ -13,15 +13,26 @@ public abstract class Guerreros {
     int salud;
     int costo;
 
+    String lugarn;
+
     public Guerreros() {
     }
 
-    public Guerreros(String nombreg, int edad, int ataque, int salud, int costo) {
+    public Guerreros(String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
         this.nombreg = nombreg;
         this.edad = edad;
         this.ataque = ataque;
         this.salud = salud;
         this.costo = costo;
+    
+    }
+
+    public String getLugarn() {
+        return lugarn;
+    }
+
+    public void setLugarn(String lugarn) {
+        this.lugarn = lugarn;
     }
 
     public String getNombreg() {
@@ -72,6 +83,8 @@ public abstract class Guerreros {
         }
 
     }
+
+    public abstract void ataque();
 
     @Override
     public String toString() {
