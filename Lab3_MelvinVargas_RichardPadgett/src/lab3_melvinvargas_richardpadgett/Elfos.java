@@ -88,7 +88,7 @@ String rangom;
 
     @Override
     public String toString() {
-        return  "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " +super.lugarn+"\nTipo de Arma" + tipoar + "\n Rango de Arma: " + rangom;
+        return  "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "\nNivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " +super.lugarn+"\nTipo de Arma" + tipoar + "\n Rango de Arma: " + rangom;
     }
     
 

@@ -96,7 +96,7 @@ public class Dragoneros extends Guerreros {
 
     @Override
     public String toString() {
-        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\n color: " + color + "\n raza: " + raza;
+        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "\nNivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\n color: " + color + "\n raza: " + raza;
     }
 
     @Override
