@@ -46,61 +46,35 @@ public class Dragoneros extends Guerreros {
         this.raza = raza;
     }
 
-    public String getNombreg() {
-        return nombreg;
-    }
-
-    public void setNombreg(String nombreg) {
-        this.nombreg = nombreg;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public int getAtaque() {
-        return ataque;
-    }
-
-    public void setAtaque(int ataque) {
-        this.ataque = ataque;
-    }
-
-    public int getSalud() {
-        return salud;
-    }
-
-    public void setSalud(int salud) {
-        this.salud = salud;
-    }
-
-    public int getCosto() {
-        return costo;
-    }
-
-    public void setCosto(int costo) {
-        this.costo = costo;
-    }
-
-    public String getLugarn() {
-        return lugarn;
-    }
-
-    public void setLugarn(String lugarn) {
-        this.lugarn = lugarn;
-    }
-
     @Override
     public String toString() {
         return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "\nNivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\n color: " + color + "\n raza: " + raza;
     }
 
     @Override
-    public boolean ataque(ArrayList<Jugadores> jug, boolean turn,boolean ganador) {
+    public boolean ataque(ArrayList<Jugadores> jug, boolean turn, boolean ganador) {
+        if (turn == false) {
+            this.ataque = (jug.get(0).getG().getAtaque());
+            if (jug.get(1).getG().getSalud() - ataque >= 0) {
+                jug.get(1).getG().setSalud(jug.get(1).getG().getSalud() - ataque);
+                jug.get(1).getG().setAtaque(jug.get(1).getG().getAtaque() - jug.get(1).getG().getAtaque() * 0.25);
+
+            } else {
+                System.out.println("jugador 2 su guerrero ha muerto :(");
+                ganador = true;
+            }
+
+        } else {
+           this.ataque = (jug.get(0).getG().getAtaque());
+            if (jug.get(0).getG().getSalud() - ataque >= 0) {
+                jug.get(0).getG().setSalud(jug.get(0).getG().getSalud() - ataque);
+                jug.get(0).getG().setAtaque(jug.get(0).getG().getAtaque() - jug.get(1).getG().getAtaque() * 0.25);
+
+            } else {
+                System.out.println("jugador 2 su guerrero ha muerto :(");
+                ganador = true;
+            }
+        }
         return ganador;
     }
 }

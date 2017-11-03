@@ -6,8 +6,8 @@ public abstract class Guerreros {
 
     String nombreg;
     int edad;
-    int ataque;
-    int salud;
+    double ataque;
+    double salud;
     int costo;
 
     String lugarn;
@@ -15,7 +15,7 @@ public abstract class Guerreros {
     public Guerreros() {
     }
 
-    public Guerreros(String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
+    public Guerreros(String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         this.nombreg = nombreg;
         this.edad = edad;
         this.ataque = ataque;
@@ -48,22 +48,22 @@ public abstract class Guerreros {
         this.edad = edad;
     }
 
-    public int getAtaque() {
+    public double getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(int ataque) {
+    public double setAtaque(double ataque) {
         if (ataque < 50) {
             this.ataque = ataque;
         }
-
+        return ataque;
     }
 
-    public int getSalud() {
+    public double getSalud() {
         return salud;
     }
 
-    public void setSalud(int salud) {
+    public void setSalud(double salud) {
         if (salud >= 100 && salud <= 200) {
             this.salud = salud;
         }
@@ -85,6 +85,6 @@ public abstract class Guerreros {
 
     @Override
     public String toString() {
-        return "Guerrero: " + "\n nombre: " + nombreg + "\n edad: " + edad + "\n Nivel de Ataque: " + ataque + ", salud=" + salud + ", costo=" + costo + '}';
+        return "Guerrero: " + "\n nombre: " + nombreg + "\n edad: " + edad + "\n Nivel de Ataque: " + ataque + "\n salud: " + salud + "\n costo: " + costo;
     }
 }

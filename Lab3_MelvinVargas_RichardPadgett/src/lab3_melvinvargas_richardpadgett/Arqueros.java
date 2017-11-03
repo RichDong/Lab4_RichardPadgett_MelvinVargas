@@ -45,53 +45,6 @@ public class Arqueros extends Guerreros {
         this.materialarm = materialarm;
     }
 
-    public String getNombreg() {
-        return nombreg;
-    }
-
-    public void setNombreg(String nombreg) {
-        this.nombreg = nombreg;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public int getAtaque() {
-        return ataque;
-    }
-
-    public void setAtaque(int ataque) {
-        this.ataque = ataque;
-    }
-
-    public int getSalud() {
-        return salud;
-    }
-
-    public void setSalud(int salud) {
-        this.salud = salud;
-    }
-
-    public int getCosto() {
-        return costo;
-    }
-
-    public void setCosto(int costo) {
-        this.costo = costo;
-    }
-
-    public String getLugarn() {
-        return lugarn;
-    }
-
-    public void setLugarn(String lugarn) {
-        this.lugarn = lugarn;
-    }
 
     @Override
     public String toString() {
