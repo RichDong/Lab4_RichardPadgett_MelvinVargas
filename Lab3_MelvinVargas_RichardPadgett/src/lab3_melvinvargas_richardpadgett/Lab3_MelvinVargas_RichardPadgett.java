@@ -19,6 +19,8 @@ public class Lab3_MelvinVargas_RichardPadgett {
             System.out.println("e-listar jugadores");
             System.out.println("f-listar guerreros");
             System.out.println("g-salir del programa");
+            System.out.println("Ingrese letra de la opcion deseada");
+            opcion=sc.next();
             if (opcion.equals("a")) {
                 System.out.println("Ingrese nombre del guerrero");
                 String nombreg = sc.next();
@@ -103,13 +105,10 @@ public class Lab3_MelvinVargas_RichardPadgett {
 
             }
             if (opcion.equals("e")) {
-
+                System.out.print(lista2);
             }
             if (opcion.equals("f")) {
-
-            }
-            if (opcion.equals("g")) {
-
+                System.out.println(lista);
             }
         }
     }
