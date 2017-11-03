@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Lab3_MelvinVargas_RichardPadgett {
 
     static ArrayList<Guerreros> lista = new ArrayList();
+    static ArrayList<Jugadores> lista2=new ArrayList();
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -62,17 +63,17 @@ public class Lab3_MelvinVargas_RichardPadgett {
                         break;
                     case 4:
                         System.out.println("Ingrese material del arco");
-                        String materialarc=sc.next();
+                        String materialarc = sc.next();
                         System.out.println("Ingrese material de la armadura");
-                        String materialarm=sc.next();
-                        lista.add(new Elfos(materialarc,materialarm,nombreg,edad,ataque,salud,costo,lugarn));
+                        String materialarm = sc.next();
+                        lista.add(new Elfos(materialarc, materialarm, nombreg, edad, ataque, salud, costo, lugarn));
                         break;
                     case 5:
                         System.out.println("Ingrese siglo de nacimiento");
-                        int suglon=sc.nextInt();
+                        int suglon = sc.nextInt();
                         System.out.println("Ingrese lugar de residencia");
-                        String lugar=sc.next();
-                        lista.add(new Brujas(suglon,lugar,nombreg,edad,ataque,salud,costo,lugarn));
+                        String lugar = sc.next();
+                        lista.add(new Brujas(suglon, lugar, nombreg, edad, ataque, salud, costo, lugarn));
                         break;
                 }
             }
@@ -82,7 +83,21 @@ public class Lab3_MelvinVargas_RichardPadgett {
                 lista.remove(pos);
             }
             if (opcion.equals("c")) {
-                
+                System.out.println("Ingrese nombre del jugador");
+                String nombre=sc.nextLine();
+                nombre=sc.nextLine();
+                System.out.println("Ingrese dinero disponible del jugador");
+                int dinero=sc.nextInt();
+                int puntos=0;
+                System.out.println("Ingrese la posicion del guerrero que quiere reclutar");
+                int pos=sc.nextInt();
+                while(lista.get(pos).getCosto()>dinero){
+                    System.out.println("Usted no puede reclutar este guerrero no tiene dinero suficiente");
+                    System.out.println("Ingrese posicion de otro guerrero");
+                    pos=sc.nextInt();
+                }
+                Guerreros g=lista.get(pos);
+                lista2.add(new Jugadores(nombre,dinero,puntos,g));
             }
             if (opcion.equals("d")) {
 
