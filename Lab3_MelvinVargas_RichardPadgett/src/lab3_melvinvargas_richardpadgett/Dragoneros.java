@@ -24,7 +24,7 @@ public class Dragoneros extends Guerreros {
         this.raza = raza;
     }
 
-    public Dragoneros(String color, String raza, String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
+    public Dragoneros(String color, String raza, String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         super(nombreg, edad, ataque, salud, costo, lugarn);
         this.color = color;
         this.raza = raza;

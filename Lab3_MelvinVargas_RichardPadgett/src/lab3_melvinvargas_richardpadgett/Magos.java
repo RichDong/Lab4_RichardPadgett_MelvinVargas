@@ -20,7 +20,7 @@ public class Magos extends Guerreros {
         this.elemnt = elemnt;
     }
 
-    public Magos(String tipom, String elemnt, String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
+    public Magos(String tipom, String elemnt, String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         super(nombreg, edad, ataque, salud, costo, lugarn);
         this.tipom = tipom;
         this.elemnt = elemnt;
@@ -46,7 +46,7 @@ public class Magos extends Guerreros {
 
     @Override
     public String toString() {
-        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\nTipo de magia: " + tipom + "\n Elemento favorito" + elemnt;
+        return "Nombre: " + super.nombreg +"\n" +"Edad: " + super.edad +"\n" +"Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\nTipo de magia: " + tipom + "\n Elemento favorito" + elemnt;
     }
 
     @Override

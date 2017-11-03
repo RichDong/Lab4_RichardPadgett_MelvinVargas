@@ -23,7 +23,7 @@ public class Brujas extends Guerreros {
         this.lugar = lugar;
     }
 
-    public Brujas(int suglon, String lugar, String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
+    public Brujas(int suglon, String lugar, String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         super(nombreg, edad, ataque, salud, costo, lugarn);
         this.suglon = suglon;
         this.lugar = lugar;

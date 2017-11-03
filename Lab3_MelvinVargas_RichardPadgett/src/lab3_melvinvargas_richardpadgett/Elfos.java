@@ -15,7 +15,7 @@ public class Elfos extends Guerreros {
         this.rangom = rangom;
     }
 
-    public Elfos(String tipoar, String rangom, String nombreg, int edad, double ataque, int salud, int costo, String lugarn) {
+    public Elfos(String tipoar, String rangom, String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         super(nombreg, edad, ataque, salud, costo, lugarn);
         this.tipoar = tipoar;
         this.rangom = rangom;

@@ -24,7 +24,7 @@ public class Arqueros extends Guerreros {
         this.materialarm = materialarm;
     }
 
-    public Arqueros(String materialarc, String materialarm, String nombreg, int edad, int ataque, int salud, int costo, String lugarn) {
+    public Arqueros(String materialarc, String materialarm, String nombreg, int edad, double ataque, double salud, int costo, String lugarn) {
         super(nombreg, edad, ataque, salud, costo, lugarn);
         this.materialarc = materialarc;
         this.materialarm = materialarm;
