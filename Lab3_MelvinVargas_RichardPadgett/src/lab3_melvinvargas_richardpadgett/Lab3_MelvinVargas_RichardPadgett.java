@@ -110,10 +110,8 @@ public class Lab3_MelvinVargas_RichardPadgett {
                     System.out.println("Ingrese posicion de otro guerrero");
                     pos = sc.nextInt();
                 }
-                Guerreros g = lista.get(pos);
+                g = lista.get(pos);
                 lista2.add(new Jugadores(nombre, dinero, puntos, g));
-                g=lista.get(pos);
-                lista2.add(new Jugadores(nombre,dinero,puntos,g));
             }
             if (opcion.equals("d")) {
                 int cont=1;
@@ -121,18 +119,22 @@ public class Lab3_MelvinVargas_RichardPadgett {
                     System.out.println("Ingrese la posicion del jugador "+cont);
                     int pos=sc.nextInt();
                     jugando.add(lista2.get(pos));
+                    cont++;
                 }
                 boolean ganador=false;
                 boolean turno=false;
                 do{
                   if(turno=false){
                       g.ataque(jugando,turno,ganador);
+                      turno=true;
                       System.out.println("Salud del guerrero del primer jugador");
                       System.out.println(jugando.get(0).getG().getSalud());
                       System.out.println("Salud del guerrero del segundo jugador");
                       System.out.println(jugando.get(1).getG().getSalud());
+                      
                   }else{
                       g.ataque(jugando,turno,ganador);
+                      turno=false;
                       System.out.println("Salud del guerrero del primer jugador");
                       System.out.println(jugando.get(0).getG().getSalud());
                       System.out.println("Salud del guerrero del segundo jugador");
@@ -144,7 +146,7 @@ public class Lab3_MelvinVargas_RichardPadgett {
                 System.out.print(lista2);
             }
             if (opcion.equals("f")) {
-                System.out.println(lista);
+                System.out.print(lista);
             }
         }
     }
