@@ -1,6 +1,8 @@
 
 package lab3_melvinvargas_richardpadgett;
 
+import java.util.ArrayList;
+
 
 public class Elfos extends Guerreros  {
 String tipoar;
@@ -86,12 +88,12 @@ String rangom;
 
     @Override
     public String toString() {
-        return "Elfos{" + "tipoar=" + tipoar + ", rangom=" + rangom + '}';
+        return  "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " +super.lugarn+"\nTipo de Arma" + tipoar + "\n Rango de Arma: " + rangom;
     }
     
 
     @Override
-    public void ataque() {
+    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
         
     }
     

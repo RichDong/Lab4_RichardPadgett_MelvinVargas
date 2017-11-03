@@ -1,5 +1,7 @@
 package lab3_melvinvargas_richardpadgett;
 
+import java.util.ArrayList;
+
 public abstract class Guerreros {
 
     String nombreg;
@@ -19,7 +21,7 @@ public abstract class Guerreros {
         this.ataque = ataque;
         this.salud = salud;
         this.costo = costo;
-    
+
     }
 
     public String getLugarn() {
@@ -79,10 +81,10 @@ public abstract class Guerreros {
 
     }
 
-    public abstract void ataque();
+    public abstract void ataque(ArrayList<Jugadores> jug, boolean turn);
 
     @Override
     public String toString() {
-        return "Guerreros{" + "nombreg=" + nombreg + ", edad=" + edad + ", ataque=" + ataque + ", salud=" + salud + ", costo=" + costo + '}';
+        return "Guerrero: " + "\n nombre: " + nombreg + "\n edad: " + edad + "\n Nivel de Ataque: " + ataque + ", salud=" + salud + ", costo=" + costo + '}';
     }
 }

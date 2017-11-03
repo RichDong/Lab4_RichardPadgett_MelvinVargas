@@ -5,7 +5,10 @@
  */
 package lab3_melvinvargas_richardpadgett;
 
-public class Magos extends Guerreros{
+import java.util.ArrayList;
+
+public class Magos extends Guerreros {
+
     String tipom;
     String elemnt;
 
@@ -89,12 +92,12 @@ public class Magos extends Guerreros{
 
     @Override
     public String toString() {
-        return "Magos{" + "tipom=" + tipom + ", elemnt=" + elemnt + '}';
+        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\nTipo de magia: " + tipom + "\n Elemento favorito" + elemnt;
     }
-    
+
     @Override
-    public void ataque() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
+
     }
-    
+
 }

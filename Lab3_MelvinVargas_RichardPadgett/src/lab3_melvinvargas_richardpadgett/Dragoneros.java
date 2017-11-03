@@ -5,11 +5,14 @@
  */
 package lab3_melvinvargas_richardpadgett;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author richa
  */
 public class Dragoneros extends Guerreros {
+
     String color;
     String raza;
 
@@ -93,11 +96,11 @@ public class Dragoneros extends Guerreros {
 
     @Override
     public String toString() {
-        return "Dragoneros{" + "color=" + color + ", raza=" + raza + '}';
+        return "Nombre: " + super.nombreg + "\nEdad: " + super.edad + "Nivel de ataque: " + super.ataque + "\n salud: " + super.salud + "\nCosto: " + super.costo + "\n Lugar de Nacimiento: " + super.lugarn + "\n color: " + color + "\n raza: " + raza;
     }
-    
+
     @Override
-    public void ataque() {
+    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
 
     }
 }

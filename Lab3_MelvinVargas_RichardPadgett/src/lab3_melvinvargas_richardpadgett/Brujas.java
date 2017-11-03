@@ -5,6 +5,8 @@
  */
 package lab3_melvinvargas_richardpadgett;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author richa
@@ -97,7 +99,7 @@ public class Brujas extends Guerreros {
     }
     
     @Override
-    public void ataque() {
+    public void ataque(ArrayList<Jugadores> jug, boolean turn) {
      
     }
     
